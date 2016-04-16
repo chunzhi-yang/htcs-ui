@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.link-right{
+    float:right;
+    text-align:right;
+    padding-right:-10px;
+}
+.link-regist{
+    color:#46b8da;
+}

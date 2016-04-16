@@ -1,0 +1,12 @@
+<ion-view view-title="个人信息" >
+  <ion-content class="padding">
+  <div class="list">
+       <a   ui-sref="user.edit({id:user.id})" class="item item-avatar-left">
+           <img ng-src="{{user.imgSrc}}">{{user.name}}
+       </a>
+       <a ng-click="messagesMine(user.id,0)" class="item item-stacked-label">我的相册</a>
+      <a ng-click="messagesMine(user.id,1)" class="item item-stacked-label">我的作品</a>
+      <a ng-click="activitiesMine(user.id)" class="item item-stacked-label">我的推荐</a>
+  </div>
+  </ion-content>
+</ion-view>

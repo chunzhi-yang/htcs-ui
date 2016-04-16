@@ -1,0 +1,53 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-side-menus>
+    <ion-side-menu-content class="calm-bg" ng-controller="navsCtrl">
+
+        <ion-nav-bar class="bar-clear">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-tabs class="tabs-icon-top tabs-color-active-balanced tabs-striped bar-footer">
+
+  <!-- activities Tab -->
+        <ion-tab title="热门活动" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/activities">
+              <ion-nav-view name="tab_activities">热门活动</ion-nav-view>
+        </ion-tab>
+
+  <!-- friends Tab -->
+       <ion-tab title="附近伙伴" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/friends">
+             <ion-nav-view name="tab_friends">附近伙伴</ion-nav-view>
+       </ion-tab>
+    <!-- Messages Tab -->
+      <ion-tab title="动态圈" icon-off="ion-ios-circle-outline" icon-on="ion-ios-circle-filled" href="#/tab/messages/{{type}}">
+           <ion-nav-view name="tab_messages">动态圈</ion-nav-view>
+      </ion-tab>
+  <!-- Account Tab -->
+      <ion-tab title="个人信息" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/tab/user">
+          <ion-nav-view name="tab_user">个人信息</ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" width="150" class="balanced-bg" is-enabled="true">
+        <ion-pane>
+            <div class="row">
+                <button class="bar bar-light">qiandao</button>
+            </div>
+        </ion-pane>
+
+    </ion-side-menu>
+
+</ion-side-menus>

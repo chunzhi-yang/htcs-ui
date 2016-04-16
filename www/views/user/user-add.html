@@ -1,0 +1,48 @@
+<ion-view view-title="user-edit" class="content" >
+
+
+ <ion-content class="padding">
+     6666666666666666666666666666666666
+    <form name="user-info" ng-submit="user-info.$valid">
+    <div class="list">
+        <label class="item item-input">
+             <span class="input-label">头像</span>
+             <input type="image" ng-model="user.avatar">
+             <img ng-src="{{user.imgSrc}}" class="item-avatar-right">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">昵称</span>
+            <input type="text" ng-model="user.name">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">性别</span>
+            <select ng-model="user.sex">
+                <option>男</option>
+                <option>女</option>
+            </select>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">生日</span>
+            <input type="datetime" ng-model="user.birthday">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">QQ</span>
+            <input type="text" ng-model="user.qq">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">微信</span>
+            <input type="text" ng-model="user.wechat">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">邮箱</span>
+            <input type="email" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">地区</span>
+            <input type="text" ng-model="user.address">
+        </label>
+    </div>
+   </form>
+ </ion-content>
+
+</ion-view>

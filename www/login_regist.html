@@ -1,0 +1,39 @@
+<ion-view view-title="注册">
+    <ion-header-bar align-title="center" class="bar-positive">{{app.name}}注册</ion-header-bar>
+    <ion-content class="padding">
+        <form ng-submit="submitForm(loginForm.$valid)" name="loginForm">
+            <div class="list">
+                <label class="item item-input ">
+                    <span class="input-label">用户名</span>
+                    <input type="text"  placeholder="用户名" ng-model="login.account" required>
+                </label>
+
+                <label class="item item-input ">
+                    <span class="input-label">昵称</span>
+                    <input type="text"   placeholder="昵称" ng-model="user.name" ng-required="true">
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">邮箱</span>
+                <input type="email" placeholder="邮箱" ng-model="user.email" ng-required="true" >
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">密码</span>
+                    <input type="password" placeholder="密码" ng-model="user.password" ng-required="true">
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">请确认密码</span>
+                    <input type="password" placeholder="请确认密码"  ng-model="user.password" ng-model="retypedPassword" bf-assert-equals="loginCtrl.user.password" ng-required="true">
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">验证码</span>
+                    <input type="text" placeholder="验证码" ng-model="user.name" ng-required="true" > <i><img ng-src="{{api.root}}/captcha.jpg" bf-captcha alt="图形验证码"/></i>
+
+                </label>
+                <button type="submit" class="button button-block button-balanced" ng-click="doCreate();">
+                立即注册
+                </button>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>
