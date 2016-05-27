@@ -1,0 +1,13 @@
+<ion-view view-title="活动详情">
+	<ion-header-bar class="bar bar-balanced" align-title="center">活动详情</ion-header-bar>
+   		<ion-content>
+            <div class="text-center">{{data.name}}</div>
+            <div class="text-center">类型：{{data.type}}</div>
+            <div class="text-right">
+                <div class="button button-clear button-assertive pull-right">名额：{{data.participantNumMax}}</div>
+                <div class="button button-clear button-assertive button-positive">已报名：{{data.participantNum}}</div>
+                <div class="button pull-right button-clear button-balanced">创建人:{{data.createdBy}}</div>
+            </div>
+            活动介绍:<div class="text-content">{{data.remark}}</div>
+        </ion-content>
+</ion-view>

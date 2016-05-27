@@ -1,0 +1,69 @@
+<ion-view view-title="活动">
+	<form name="newActivity" novalidate>
+		<ion-header-bar class="bar bar-balanced" align-title="center">新建活动
+			<button class="button button-calm pull-right" type="submit" ng-disabled="newActivity.$invalid">提交</button> 
+		</ion-header-bar>
+   		<ion-content>
+	 		<label class="item-input">
+	 			<span class="item-label">活动名称</span>
+	 			<input type="text" name="activityName" ng-model="newActivity.name" required ng-maxlength="50">
+	 		</label>
+		   <span ng-messages="newActivity.activityName.$dirty&&newActivity.activityName.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">活动名称不能为空</div>
+                 <div ng-message="maxlength" class="link-right">活动名称不能超过50位</div>
+           </span>			
+           <label class="item-input">
+	 			<span class="item-label">活动类型</span>
+	 			<input type="text" name="activityType" ng-model="newActivity.activityType" required ng-maxlength="50">
+	 		</label>
+		   <span ng-messages="newActivity.activityType.$dirty&&newActivity.activityType.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">活动类型不能为空</div>
+                <div ng-message="maxlength" class="link-right">活动类型不能超过10位</div>
+           </span>			
+            <label class="item-input">
+	 			<span class="item-label">活动内容</span>
+	 			<textarea name="_remark" ng-model="newActivity.remark" required ng-maxlength="50"></textarea>
+	 		</label>
+		   <span ng-messages="newActivity._remark.$dirty&&newActivity._remark_remark.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">活动内容不能为空</div>
+                <div ng-message="maxlength" class="link-right">活动类型不能超过1000位</div>
+           </span>			
+            <label class="item-input">
+	 			<span class="item-label">活动特色</span>
+	 			<input type="text" name="_specialty" ng-model="newActivity.specialty" ng-maxlength="200">
+	 		</label>
+		   <span ng-messages="newActivity._specialty_specialty_specialty.$dirty&&newActivity._specialty_specialty.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">活动类型不能为空</div>
+                <div ng-message="maxlength" class="link-right">活动类型不能超过200位</div>
+           </span>		
+             <label class="item-input">
+	 			<span class="item-label">开始时间</span>
+	 			<input type="date" name="_startTime" ng-model="newActivity.startTime" required >
+	 		</label>
+		   <span ng-messages="newActivity._startTime.$dirty&&newActivity._startTime.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">请选择开始时间</div>                
+           </span>		
+             <label class="item-input">
+	 			<span class="item-label">结束时间</span>
+	 			<input type="date" name="_endTime" ng-model="newActivity.endTime" required >
+	 		</label>
+		   <span ng-messages="newActivity._endTime.$dirty&&newActivity._endTime.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">请选择结束时间</div>                
+           </span>		
+            <label class="item-input">
+	 			<span class="item-label">费用详情</span>
+	 			<textarea name="_priceSource" ng-model="newActivity._priceSource"></textarea>
+	 		</label>
+		   <span ng-messages="newActivity._priceSource.$dirty&&newActivity._endTime.$error" style="color:maroon" class="item" role="alert">
+		   <span ng-messages="newActivity._priceSource.$dirty&&newActivity._endTime.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">请选择结束时间</div>                
+           </span>		
+            <label class="item-input">
+	 			<span class="item-label">价格</span>
+	 			<input type="number" name="_price" ng-model="newActivity.price" required >
+	 		</label>
+		   <span ng-messages="newActivity._price.$dirty&&newActivity._price.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">请输入价格</div>                
+           </span>		
+   	   </ion-content>
+</ion-view>

@@ -1,0 +1,57 @@
+<ion-view view-title="景点">    
+	<form name="newScenery" novalidate>
+		<ion-header-bar class="bar bar-balanced" align-title="center">新建景点
+			<button class="button button-calm pull-right" type="submit" ng-disabled="newScenery.$invalid">提交</button> 
+		</ion-header-bar>
+   		<ion-content>
+	 		<label class="item-input">
+	 			<span class="item-label">名称</span>
+	 			<input type="text" name="_name" ng-model="newScenery.name" required ng-maxlength="50">
+	 		</label>
+		   <span ng-messages="newScenery._name.$dirty&&newScenery._name.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">景点名称不能为空</div>
+                 <div ng-message="maxlength" class="link-right">景点名称不能超过50位</div>
+           </span>			
+           <label class="item-input">
+	 			<span class="item-label">封面图</span>
+	 			<input type="number" name="_coverPhoto" ng-model="newScenery._coverPhoto" required >
+	 		</label>
+		   <span ng-messages="newScenery._coverPhoto.$dirty&&newScenery._coverPhoto.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">请选择封面图</div>                
+           </span>		
+           <label class="item-input">
+	 			<span class="item-label">类型</span>
+	 			<input type="text" name="activityType" ng-model="newScenery.activityType" required ng-maxlength="20">
+	 		</label>
+		   <span ng-messages="newScenery.activityType.$dirty&&newScenery.activityType.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">景点类型不能为空</div>
+                <div ng-message="maxlength" class="link-right">景点类型不能超过20位</div>
+           </span>			
+            <label class="item-input">
+	 			<span class="item-label">地址</span>
+	 			<textarea name="_remark" ng-model="newScenery.remark" required ng-maxlength="100"></textarea>
+	 		</label>
+		   <span ng-messages="newScenery._remark.$dirty&&newScenery._remark_remark.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">景区地址不能为空</div>
+                <div ng-message="maxlength" class="link-right">景区地址不能超过100位</div>
+           </span>			
+            <label class="item-input">
+	 			<span class="item-label">景点介绍</span>
+	 			<input type="text" name="_specialty" ng-model="newScenery.specialty" ng-maxlength="200">
+	 		</label>
+		   <span ng-messages="newScenery._specialty_specialty_specialty.$dirty&&newScenery._specialty_specialty.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">景点介绍不能为空</div>
+                <div ng-message="maxlength" class="link-right">景点介绍不能超过200位</div>
+           </span>		
+             
+            <label class="item-input">
+	 			<span class="item-label">景点特色</span>
+	 			<textarea name="_priceSource" ng-model="newScenery._priceSource"></textarea>
+	 		</label>
+		   <span ng-messages="newScenery._priceSource.$dirty&&newScenery._endTime.$error" style="color:maroon" class="item" role="alert">
+		   <span ng-messages="newScenery._priceSource.$dirty&&newScenery._endTime.$error" style="color:maroon" class="item" role="alert">
+                <div ng-message="required" class="link-right">景点特色不能为空</div>                
+           </span>		
+            
+   	   </ion-content>
+</ion-view>

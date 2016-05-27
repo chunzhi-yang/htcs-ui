@@ -1,0 +1,34 @@
+<ion-view view-title="推荐">
+    <ion-content>
+      <div class="card">
+            <div class="title text-left assertive"><button class="button button-small button-balanced button-outline">
+                线路</button></div>
+            <div class="list" ng-repeat="data in activities">
+                <div class="text-center">{{data.name}}</div>
+                <div class="text-center">类型：{{data.type}}</div>
+                <div class="text-right">
+                <div class="button button-clear button-assertive pull-right">名额：{{data.participantNumMax}}</div>
+                <div class="button button-clear button-assertive button-positive">已报名：{{data.participantNum}}</div>
+                <div class="button pull-right button-clear button-balanced">创建人:{{data.createdBy}}</div>
+               
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="title text-left assertive"><button class="button button-small button-outline button-positive">
+                景点</button></div>
+            <div class="list" ng-repeat="data in sceneries">
+                <p class="text-center">{{data.name}}</p>
+                <div class="item item-image"><img ng-src="{{data.coverPhoto}}" on-finish-render></div>
+                <p class="text-center">特色：{{data.specialties}}</p>
+                <div class="text-right" style="padding-right: 5px">
+                    <label class="icon ion-android-favorite">{{data.favor}}</label>
+                    <label class="icon ion-eye">{{data.viewCount}}</label>
+                </div>
+                <div class="text-right">
+                  <label class="button pull-right button-balanced button-clear">创建人：{{data.createdBy}}</label>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

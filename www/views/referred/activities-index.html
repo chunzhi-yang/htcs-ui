@@ -1,0 +1,22 @@
+         <ion-view view-title="我的活动">
+             <ion-header-bar align-title="center" class="bar bar-calm link-right">我的活动
+
+             </ion-header-bar>
+         <ion-content>
+             <a  class=" item item-avatar-right">
+                 {{usingName}} <img ng-src="{{usingAvatar}}">
+             </a>
+             <span class="item item-assertive" ng-if="activities">您还没有动态</span>
+
+             <div class="card">
+               <div class="item" ng-repeat="data in activities">
+                   <div class="center-display">{{data.name}}</div>
+                   <div class="item-content">类型：{{data.type}}</div>
+                   <div class="item-content">已报名：{{data.participantNum}}</div>
+                   <div class="button button-clear pull-right">名额：{{data.participantNumMax}}</div>
+                   <div class="button pull-right button-clear">创建人:{{data.createdBy}}</div>
+               </div>
+             </div>
+         </ion-content>
+      </ion-view>
+
